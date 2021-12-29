@@ -16,7 +16,7 @@ export default function Home(list) {
         <h1 className={styles.title}>
         Filmes em Destaque - final
         </h1>
-
+{/* 
         <Link href="/busca">Buscar Filmes</Link>
           <ul>
            {list.list.map((item) => 
@@ -30,7 +30,7 @@ export default function Home(list) {
              </li>
             )}
           </ul>
-           
+            */}
 
       </main>
       <footer className={styles.footer}>

@@ -47,7 +47,7 @@ export default function MovieItem({info}) {
 
 export async function getServerSideProps(context){
   const id = context.params.id
-  const res = await fetch(`http://localhost:3000/api/movie/${id}`)
+  const res = await fetch(`https://cinemanext-delta.vercel.app/api/movie/${id}`)
   const json = await res.json()
   return{
     props: {

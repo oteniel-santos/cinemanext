@@ -20,11 +20,13 @@ export default function Home(list) {
         <Link href="/busca">Buscar Filmes</Link>
           <ul>
            {list.list.map((item) => 
-              <li>
-                <a href={`/movie/${item.id}`}>  
-                  <img src={`https://image.tmdb.org/t/p/original${item.poster_path}`} width="150"/><br/>
+              <li key={item.id}>
+                <Link href={`/movie/${item.id}`}>  
+                <>
+                  <Image alt ="post filme" src={`https://image.tmdb.org/t/p/original${item.poster_path}`} width="150"/><br/>
                   {item.title}
-                </a> 
+                </>
+                </Link> 
              </li>
             )}
           </ul>
@@ -32,7 +34,7 @@ export default function Home(list) {
 
       </main>
       <footer className={styles.footer}>
-        <a href="/sobre">Sobre mim</a>
+        <Link href="/sobre">Sobre mim</Link>
 
         <a
           href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"

@@ -19,8 +19,7 @@ export default function MovieItem({info}) {
         <p>Nota: {info.vote_average}</p>
 
         <p>{info.overview}</p>
-        <img src={`https://image.tmdb.org/t/p/original${info.backdrop_path}`} width="400" />
-
+        <Image src={`https://image.tmdb.org/t/p/original${info.backdrop_path}`} alt="Imagem Fime" width={400}  />
         <Link href="/busca">Buscar</Link>
          
            

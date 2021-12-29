@@ -14,10 +14,10 @@ export default function Home(list) {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-        Filmes em Destaque
+        Filmes em Destaque - final
         </h1>
 
-        <Link href="/busca">Buscar</Link>
+        <Link href="/busca">Buscar Filmes</Link>
           <ul>
            {list.list.map((item) => 
               <li>

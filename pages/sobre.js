@@ -1,8 +1,9 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import Link from 'next/link'
 
-export default function Home(props) {
+export default function Home({author}) {
   return (
     <div className={styles.container}>
       <Head>
@@ -13,9 +14,14 @@ export default function Home(props) {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-        Filmes em Destaque
+        Sobre o sistema
         </h1>
-        Meu nome é {props.name}
+
+        <p>Author: {author} </p>
+
+    
+       
+           
 
       </main>
       <footer className={styles.footer}>
@@ -34,11 +40,10 @@ export default function Home(props) {
   )
 }
 
-export async function getServerSideProps(){
-  
+export async function getStaticProps(){
   return{
     props: {
-      name: 'Oteniel'
+      author: 'Oteniel Santos'
     }     
   }
 }

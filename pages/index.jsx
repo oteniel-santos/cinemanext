@@ -21,11 +21,17 @@ export default function Home(list) {
           <ul>
            {list.list.map((item) => 
               <li key={item.id}>
-                <Link href={`/movie/${item.id}`}>  
-                <>
-                  <Image src={`https://image.tmdb.org/t/p/original${item.poster_path}`} alt ="post filme" width="150"/><br/>
+                <Link href={`/movie/${item.id}`} >  
+                <a>
+                  <Image 
+                    src={`https://image.tmdb.org/t/p/original${item.poster_path}`} 
+                    alt ="post filme" 
+                    width={150}
+                    height={150}
+                    />
+                  <br/>
                   {item.title}
-                </>
+                </a>
                 </Link> 
              </li>
             )}

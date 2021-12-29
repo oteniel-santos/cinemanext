@@ -16,7 +16,7 @@ export default function Home(list) {
         <h1 className={styles.title}>
         Filmes em Destaque - final
         </h1>
-{/* 
+
         <Link href="/busca">Buscar Filmes</Link>
           <ul>
            {list.list.map((item) => 
@@ -30,7 +30,7 @@ export default function Home(list) {
              </li>
             )}
           </ul>
-            */}
+           
 
       </main>
       <footer className={styles.footer}>
@@ -51,12 +51,12 @@ export default function Home(list) {
   )
 }
 
-// export async function getServerSideProps(){
-//   const res = await fetch('http://localhost:3000/api/trending')
-//   const json = await res.json()
-//   return{
-//     props: {
-//       list: json.list
-//     }     
-//   }
-// }
+export async function getServerSideProps(){
+  const res = await fetch('https://cinemanext02.vercel.app/api/trending')
+  const json = await res.json()
+  return{
+    props: {
+      list: json.list
+    }     
+  }
+}
